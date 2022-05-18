@@ -42,6 +42,10 @@ functions:
     handler: lambda.maintain
     events:
       - schedule: rate(1 day)
+  dispatcher:
+    handler: lambda.dispatcher
+    events:
+      - schedule: rate(1 minute)
 
 resources:
   Resources:
